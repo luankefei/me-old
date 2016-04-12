@@ -1,14 +1,14 @@
 {
-  "name": "react-redux-universal-hot-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux and hot reloading",
-  "repository": "https://github.com/erikras/react-redux-universal-hot-example",
+  "name": "me",
+  "description": "All the modern best practices in one site.",
+  "repository": "https://github.com/luankefei/me",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": [
     "react",
     "isomorphic",
     "universal",
     "webpack",
-    "express",
+    "koa",
     "hot reloading",
     "react-hot-reloader",
     "redux",

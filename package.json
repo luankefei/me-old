@@ -62,7 +62,8 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "development",
         "PORT": 3000,
-        "APIPORT": 3030
+        "APIPORT": 3030,
+        "DEBUG": "app:*"
       }
     },
     "start-dev-api": {
@@ -70,7 +71,8 @@
       "env": {
         "NODE_PATH": "./api",
         "NODE_ENV": "development",
-        "APIPORT": 3030
+        "APIPORT": 3030,
+        "DEBUG": "api:*"
       }
     },
     "watch-client": {
@@ -110,9 +112,9 @@
     "koa-router": "^7.0.1",
     "koa-response-time": "^2.0.0",
     "koa-logger": "^2.0.0",
-    "koa-router": "^7.0.0",
+    "koa-router": "^7.0.1",
     "koa-compress": "^2.0.0",
-    "koa-session2": "^1.0.0",
+    "koa-session": "^3.3.1",
     "koa-bodyparser": "^3.0.0",
     "debug": "^2.2.0",
     "file-loader": "^0.8.5",

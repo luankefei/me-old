@@ -15,39 +15,39 @@ export default class Chat extends Component {
     messages: []
   };
 
-  componentDidMount() {
-    if (socket) {
-      socket.on('msg', this.onMessageReceived);
-      setTimeout(() => {
-        socket.emit('history', {offset: 0, length: 100});
-      }, 100);
-    }
-  }
+  // componentDidMount() {
+  //   if (socket) {
+  //     socket.on('msg', this.onMessageReceived);
+  //     setTimeout(() => {
+  //       socket.emit('history', {offset: 0, length: 100});
+  //     }, 100);
+  //   }
+  // }
+  //
+  // componentWillUnmount() {
+  //   if (socket) {
+  //     socket.removeListener('msg', this.onMessageReceived);
+  //   }
+  // }
 
-  componentWillUnmount() {
-    if (socket) {
-      socket.removeListener('msg', this.onMessageReceived);
-    }
-  }
+  // onMessageReceived = (data) => {
+  //   const messages = this.state.messages;
+  //   messages.push(data);
+  //   this.setState({messages});
+  // }
 
-  onMessageReceived = (data) => {
-    const messages = this.state.messages;
-    messages.push(data);
-    this.setState({messages});
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const msg = this.state.message;
-
-    this.setState({message: ''});
-
-    socket.emit('msg', {
-      from: this.props.user.name,
-      text: msg
-    });
-  }
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //
+  //   const msg = this.state.message;
+  //
+  //   this.setState({message: ''});
+  //
+  //   socket.emit('msg', {
+  //     from: this.props.user.name,
+  //     text: msg
+  //   });
+  // }
 
   render() {
     const style = require('./Chat.scss');
