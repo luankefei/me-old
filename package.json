@@ -14,7 +14,7 @@
     "isomorphic",
     "universal",
     "webpack",
-    "express",
+    "koa",
     "hot reloading",
     "react-hot-reloader",
     "redux",
@@ -198,6 +198,6 @@
     "nodemon": "1.9.1"
   },
   "engines": {
-    "node": "5.6.0"
+    "node": "5.10.1"
   }
 }
