@@ -3,7 +3,7 @@
 
 ## About
 
-The morden best practice all in one.
+All the modern best practices in one site.
 
 ## Installation
 
