@@ -54,9 +54,9 @@ npm run start
 - TODO
 
 
-## Contributing
+## Contributors
 
-If you would like to submit a pull request, please make an effort to follow the guide in [CONTRIBUTING.md](CONTRIBUTING.md).
+- TODO
 
 ---
 Thanks for checking this out.
