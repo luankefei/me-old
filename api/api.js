@@ -4,15 +4,14 @@ import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
 import logger from 'koa-logger';
 import Router from 'koa-router';
-// import proxy from 'koa-proxy'
 
 import config from '../src/config';
 import * as actions from './actions/index';
 import {mapUrl} from 'utils/url.js';
 import PrettyError from 'pretty-error';
 import _debug from 'debug';
-// import http from 'http';
 
+// init
 const pretty = new PrettyError();
 const app = new Koa();
 const router = new Router();
@@ -40,31 +39,6 @@ router.get('/user', ctx => {
 
 app.use(router.routes());
 app.use(bodyParser());
-// app.use((ctx) => {
-//   const splittedUrlPath = req.url.split('?')[0].split('/').slice(1);
-//   const {action, params} = mapUrl(actions, splittedUrlPath);
-//
-//   if (action) {
-//     action(req, params)
-//       .then((result) => {
-//         const req = ctx, res = ctx;
-//         if (result instanceof Function) {
-//           result(res);
-//         } else {
-//           res.json(result);
-//         }
-//       }, (reason) => {
-//         if (reason && reason.redirect) {
-//           res.redirect(reason.redirect);
-//         } else {
-//           console.error('API ERROR:', pretty.render(reason));
-//           res.status(reason.status || 500).json(reason);
-//         }
-//       });
-//   } else {
-//     res.status(404).end('NOT FOUND');
-//   }
-// });
 
 const bufferSize = 100;
 const messageBuffer = new Array(bufferSize);
