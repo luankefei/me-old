@@ -1,8 +1,5 @@
 # Sunken.me
 
-
-## About
-
 All the modern best practices in one site.
 
 ## Installation
