@@ -8,11 +8,12 @@ import Router from 'koa-router';
 import util from 'util';
 import path from 'path';
 import config from '../src/config';
-import * as actions from './actions/index';
 import {mapUrl} from 'utils/url.js';
 import PrettyError from 'pretty-error';
 import _logger from 'libs/logger.js';
 import _debug from 'debug';
+import routes from 'controllers/routes';
+
 
 // init
 const pretty = new PrettyError();
@@ -32,7 +33,6 @@ app.use(async (ctx, next) => {
   const ms = Date.now() - start;
   ctx.set('X-Response-Time', ms + 'ms');
 });
-
 
 // logger
 const koaBunyan = function (logger, opts) {
@@ -58,7 +58,6 @@ const koaBunyan = function (logger, opts) {
     ctx.res.once('finish', done);
     ctx.res.once('close', done);
 
-
     await next();
   };
 };
@@ -78,15 +77,10 @@ app.keys = ['me.sunken'];
 app.use(convert(session(app)));
 
 // router
-router.get('/auth', ctx => {
-  ctx.body = {
-    name: 'sunken',
-    email: 'luankefei@gmail.com'
-  };
-});
-
+routes(router);
 app.use(router.routes());
 app.use(bodyParser());
+// end middlewares
 
 
 const bufferSize = 100;
