@@ -111,8 +111,8 @@ module.exports = {
       __DEVTOOLS__: true  // <-------- DISABLE redux-devtools HERE
     }),
     webpackIsomorphicToolsPlugin.development()
-  ],
-  node: {
-    fs: 'empty'
-  }
+  ]
+  // node: {
+  //   fs: 'empty'
+  // }
 };
