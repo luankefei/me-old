@@ -48,17 +48,16 @@ export default class App extends Component {
   };
 
   render() {
-    // const {user} = this.props;
+    const {user} = this.props;
     const styles = require('./App.scss');
 
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
-        <h1>Sunken.me</h1>
-        <div>All the modern best practices in one site.</div>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
+        <div>{JSON.stringify(user)}</div>
       </div>
     );
   }

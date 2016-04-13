@@ -78,9 +78,11 @@ app.keys = ['me.sunken'];
 app.use(convert(session(app)));
 
 // router
-router.get('/user', ctx => {
-  debug('you got user.');
-  ctx.body = 'hello, world';
+router.get('/auth', ctx => {
+  ctx.body = {
+    name: 'sunken',
+    email: 'luankefei@gmail.com'
+  };
 });
 
 app.use(router.routes());
