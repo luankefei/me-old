@@ -92,6 +92,14 @@
     }
   },
   "dependencies": {
+    "compression": "*",
+    "express": "*",
+    "express-session": "*",
+    "react-bootstrap": "*",
+    "font-awesome": "*",
+    "font-awesome-webpack": "*",
+    "bootstrap-sass": "*",
+    "bunyan": "1.8.0",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.1",
     "babel-plugin-add-module-exports": "^0.1.2",
@@ -105,6 +113,7 @@
     "babel-register": "^6.3.13",
     "babel-runtime": "^6.3.19",
     "koa": "^2.0.0-alpha.3",
+    "koa-bunyan": "0.0.2",
     "koa-connect-history-api-fallback": "^0.3.0",
     "koa-convert": "^1.2.0",
     "koa-proxy": "^0.5.0",

@@ -1,5 +1,14 @@
 require('babel-polyfill');
 
+const pkg = require('../package.json');
+const util = require('util');
+const path = require('path');
+const argv = require('yargs').argv;
+
+// import util from 'util';
+// import path from 'path';
+// import yargs from 'yargs';
+
 const environment = {
   development: {
     isProduction: false
@@ -9,9 +18,23 @@ const environment = {
   }
 }[process.env.NODE_ENV || 'development'];
 
+const DEFAULT_PORT = 3030;
+
+let port;
+if (util.isNullOrUndefined(process.env.NODE_APP_INSTANCE)) {
+  // dev port
+  port = argv.PORT || DEFAULT_PORT;
+} else {
+  // cluster: 3030 ~ *
+  port = DEFAULT_PORT + ~~process.env.NODE_APP_INSTANCE;
+}
+
 module.exports = Object.assign({
+  version: pkg.version,
+  name: pkg.name,
+  root: path.resolve(__dirname, '../'),
   host: process.env.HOST || 'localhost',
-  port: process.env.PORT,
+  port: port,
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
