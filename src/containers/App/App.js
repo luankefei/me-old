@@ -54,7 +54,7 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
-        <div>Sunken.me</div>
+        <h1>Sunken.me</h1>
         <div>All the modern best practices in one site.</div>
         <div className={styles.appContent}>
           {this.props.children}
