@@ -50,6 +50,8 @@ if (!reactTransform) {
   babelLoaderQuery.plugins.push(reactTransform);
 }
 
+console.log(JSON.stringify(babelLoaderQuery));
+
 if (!reactTransform[1] || !reactTransform[1].transforms) {
   reactTransform[1] = Object.assign({}, reactTransform[1], {transforms: []});
 }
@@ -108,7 +110,7 @@ module.exports = {
       __CLIENT__: true,
       __SERVER__: false,
       __DEVELOPMENT__: true,
-      __DEVTOOLS__: true  // <-------- DISABLE redux-devtools HERE
+      __DEVTOOLS__: false  // <-------- DISABLE redux-devtools HERE
     }),
     webpackIsomorphicToolsPlugin.development()
   ]
