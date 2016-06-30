@@ -41,7 +41,7 @@ module.exports = Object.assign({
     title: 'sunken.me',
     description: 'All the modern best practices in one site.',
     head: {
-      title: 'sunkne.me',
+      title: 'sunken.me',
       meta: [
         {name: 'description', content: 'All the modern best practices in one site.'},
         {charset: 'utf-8'},

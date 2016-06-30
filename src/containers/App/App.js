@@ -56,7 +56,7 @@ export default class App extends Component {
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-        <div>{JSON.stringify(user)}</div>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
       </div>
     );
   }
