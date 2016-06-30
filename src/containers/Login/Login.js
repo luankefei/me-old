@@ -52,9 +52,11 @@ export default class Login extends Component {
     // const logoSrc = require('../components/Nav/logo.png');
     return (
       <div className={styles.login}>
-        <div className={styles.slogan}>Hello, my old friend.</div>
-        <input ref='username' type='text' placeholder='用户名' value='sunken' />
-        <input ref='password' type='password' placeholder='密码' value='123456' />
+        <div className={styles.main}>
+          <div className={styles.slogan}>Hello, my old friend.</div>
+          <input ref='username' type='text' placeholder='用户名' value='sunken' />
+          <input ref='password' type='password' placeholder='密码' value='123456' />
+        </div>
       </div>
     );
   }
