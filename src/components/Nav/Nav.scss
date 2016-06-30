@@ -1,0 +1,271 @@
+@import '../../theme/vars.scss';
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $layout-nav-width;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: (12rem / $font-size-base);
+  background: #40454e;
+  color: #ccc;
+
+  > .account-info {
+    position: relative;
+    height: 70px;
+    padding-top: 20px;
+    text-align: center;
+
+    > .account-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      line-height: 40px;
+      height: 80px;
+      border-top: 1px solid #40454e;
+      background: #2d3139;
+      text-align: center;
+
+      li:hover {
+        color: #fff;
+      }
+    }
+
+    .rank-list {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: 150px;
+      background: #2d3139;
+      border: 1px solid #40454e;
+      padding: 10px 5px;
+      box-sizing: border-box;
+
+      > h3 {
+        height: 30px;
+        line-height: 30px;
+        font-size: (13rem / $font-size-base);
+      }
+
+      > ul {
+        max-height: 300px;
+        overflow-y: auto;
+
+        li {
+          line-height: 30px;
+          padding: 0 5px;
+          clear: both;
+
+          .name {
+            float: left;
+          }
+
+          .count {
+            float: right;
+          }
+        }
+      }
+
+      .highlight {
+        color: #44a8f3;
+      }
+    }
+
+    img {
+      width: 34px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    > span {
+      color: #fff;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #2d3139;
+    }
+  }
+
+  nav {
+    margin-top: 100px;
+
+    a {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      border-left: 3px solid transparent;
+      margin-bottom: 20px;
+      color: inherit;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .wait, .chat {
+      position: absolute;
+      left: 35px;
+      top: -2px;
+      padding: 0 5px;
+      border-radius: 15px;
+      background: #ff3535;
+      min-width: 14px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      transform: scale(.8);
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 8px;
+
+    > div {
+      // width: 64px;
+      line-height: 24px;
+      margin: 0 auto 10px auto;
+
+      > span {
+        display: block;
+        color: #777;
+        font-size: (12rem / $font-size-base);
+      }
+
+      > select, > button {
+        width: auto;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin-top: 3px;
+        background: #575c68;
+        color: #ccc;
+        border: 0;
+      }
+    }
+
+    .service-type {
+      position: relative;
+
+      > button {
+        width: 50px;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+    }
+
+    .list {
+      position: absolute;
+      left: 68px;
+      bottom: 0;
+      width: 120px;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 5px;
+      color: $font-color-gray;
+      // border: 1px solid #eee;
+      box-shadow: 0 0 2px #ddd;
+      border-radius: 4px;
+
+      ul {
+        max-height: 300px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+
+        li {
+          line-height: 20px;
+
+          &:hover {
+            background: #f8f8f8;
+            color: #444;
+          }
+
+          label {
+            display: block;
+
+            input {
+              margin-left: 5px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-left: 5px;
+        padding: 2px 10px;
+        background: #337ab7;
+        color: #fff;
+        border: 0;
+        border-radius: 3px;
+        width: 100px;
+        font-size: 12px;
+
+        &:hover {
+          background: #2e6da4;
+        }
+      }
+    }
+
+    .sound, .noti {
+      width: 24px;
+      height: 24px;
+      border: 0;
+      vertical-align: top;
+      background-color: transparent;
+      color: #999;
+      font-size: 16px;
+    }
+
+    // .sound-on, .sound-off, .noti-on, .noti-off {
+      // width: 24px;
+      // height: 24px;
+      // // margin-top: 20px;
+      // border: 0;
+      // vertical-align: top;
+      // background-image: url(./sound_on.png);
+      // background-repeat: no-repeat;
+      // background-color: transparent;
+      // background-size: 100%;
+      // background-position: center;
+    // }
+    //
+    // .noti-on, .noti-off {
+    //   margin-left: 6px;
+    // }
+    //
+    // .sound-off {
+    //   background-image: url(./sound_off.png);
+    // }
+    //
+    // .noti-on {
+    //   background-image: url(../ChatInputBar/close.jpg);
+    // }
+    //
+    // .noti-off {
+    //   background-image: url(../ChatInputBar/close_hover.jpg);
+    // }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .bottom {
+    display: none
+  }
+}
