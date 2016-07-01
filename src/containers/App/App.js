@@ -55,9 +55,7 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
-        <div className={styles.appContent}>
-          {this.props.children}
-        </div>
+        {this.props.children}
         {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
       </div>
     );

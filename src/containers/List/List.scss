@@ -1,11 +1,29 @@
 @import '../../theme/vars.scss';
 
 .list {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+
+  .header {
+    height: 160px;
+    border-bottom: 1px solid rgb(221, 222, 224);
+    margin-bottom: 62px;
+    padding-top: 20px;
+
+    // margin-left: 40px;
+    // margin-right: 40px;
+
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+
+    // width: 100%;
+  }
+
 
   .search {
     height: 28px;

@@ -1,51 +1,33 @@
 @import '../../theme/vars.scss';
 
 .nav {
-  height: 160px;
-  border-bottom: 1px solid rgb(221, 222, 224);
-  margin-bottom: 62px;
-  padding-top: 20px;
-
-  margin-left: 40px;
-  margin-right: 40px;
+  height: 30px;
+  background: rgb(84, 86, 81);
+  padding-left: 20px;
+  padding-right: 20px;
 
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 
-  width: 100%;
+  > div {
+    width: 1000px;
+    margin: 0 auto;
+  }
 
-  > nav {
-    height: 30px;
-    background: rgb(84, 86, 81);
-    padding-left: 20px;
-    padding-right: 20px;
+  > div a {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-top: 4px; /* (30 - 22) / 2 */
 
-    > .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    > a {
-      color: #fff;
-    }
-
-    > ul li {
-      float: left;
-      width: 40px;
-      height: 22px;
-      margin-top: 4px; /* (30 - 22) / 2 */
-
-      line-height: 22px;
-      font-size: 1.076923077rem; /* 14 / 13 */
-      text-align: center;
-      color: #fff;
-      margin-right: 20px;
-
-      &.selected {
-        background: rgb(237, 68, 65);
-      }
-    }
+    line-height: 22px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
   }
 
   // 加载进度条
