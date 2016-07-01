@@ -13,8 +13,16 @@ export default class List extends Component {
 
   render() {
     const styles = require('./List.scss');
+    const logoImage = require('./logo.png');
     return (
       <div className={styles.list}>
+        <header className={styles.header}>
+          <div className={styles.top}>
+            <img className={styles.logo} src={logoImage} alt='www.sunken.me' />
+            <div className={styles.slogan}>想法、层次、评论、戏剧性、流言</div>
+          </div>
+          <div className={styles['load-bar']}></div>
+        </header>
         <div className={styles.main}>
           <h2>最新文章</h2>
           <div ref='contents' className={styles.contents}></div>

@@ -5,7 +5,7 @@ import {Nav, Foot} from 'components';
 export default function Main(props) {
   const styles = require('./Main.scss');
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.main}>
       <Nav />
       <div>{props.children}</div>
       <Foot />
