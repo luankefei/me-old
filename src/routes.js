@@ -4,7 +4,7 @@ import {IndexRoute, Route} from 'react-router';
 import {
     App,
     Login,
-    Home,
+    List,
     NotFound
   } from 'containers';
 
@@ -33,7 +33,7 @@ export default (store) => {
   return (
     <Route path='/' component={App}>
       {/* Home (main) route */}
-      <IndexRoute component={Home}/>
+      <IndexRoute component={List}/>
 
       {/* Routes requiring login */}
       {/* <Route onEnter={requireLogin}>TODO</Route> */}
