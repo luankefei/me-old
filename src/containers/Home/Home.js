@@ -30,8 +30,10 @@ export default class List extends Component {
             <div ref='contents' className={styles.contents}>
               <Article />
             </div>
-            <div ref='pager'>
+            <div ref='pager' className={styles.pager}>
               <a className={styles.prev} href='#'>{'< 前页'}</a>
+              <a className={styles.selected} href='#'>1</a>
+              <a href='#'>2</a>
               <a className={styles.next} href='#'>后页 ></a>
             </div>
           </div>

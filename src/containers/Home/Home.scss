@@ -17,6 +17,7 @@
   .main {
     clear: both;
     overflow: hidden;
+    padding-bottom: 40px;
 
     h2 {
       font-size: 14px;
@@ -32,8 +33,6 @@
   aside {
     float: right;
     width: 190px;
-    clear: both;
-    overflow: hidden;
 
     .search {
       height: 28px;
@@ -100,6 +99,41 @@
       color: #777;
       margin-bottom: 10px;
       margin-right: 5px;
+    }
+  }
+
+  .pager {
+    width: 498px;
+    height: 28px;
+    border: 1px solid rgb(221, 222, 224);
+
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .prev {
+      margin-left: 30px;
+      margin-right: 20px;
+    }
+
+    .next {
+      margin-right: 30px;
+      margin-left: 20px;
+    }
+
+    a {
+      padding-left: 5px;
+      padding-right: 5px;
+      line-height: 28px;
+      color: rgb(83, 88, 95);
+    }
+
+    a.selected {
+      color: $theme-color;
+    }
+
+    a:not(.prev):not(.next):hover {
+      color: $theme-color;
     }
   }
 }
