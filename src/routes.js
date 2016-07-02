@@ -4,6 +4,7 @@ import {IndexRoute, Route} from 'react-router';
 import {
     App,
     Main,
+    Home,
     Login,
     List,
     NotFound
@@ -46,11 +47,12 @@ export default (store) => {
       <Route path='list' component={List} />
       */}
       <Route component={Main}>
-        <IndexRoute component={List} />
+        <IndexRoute component={Home} />
+        <Route path='list' component={List} />
       </Route>
 
       {/* Routes */}
-      <Route path='/login' component={Login} />
+      <Route path='login' component={Login} />
 
       {/* Catch all route */}
       <Route path='*' component={NotFound} status={404} />
