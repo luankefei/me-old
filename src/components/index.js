@@ -6,3 +6,4 @@
  */
  export Nav from './Nav/Nav';
  export Foot from './Foot/Foot';
+ export Article from './Article/Article';

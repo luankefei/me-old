@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as authActions from 'redux/modules/auth';
+import {Article} from 'components';
 
 @connect(
   state => ({user: state.auth.user}),
@@ -26,7 +27,9 @@ export default class List extends Component {
         <div className={styles.main}>
           <div className={styles.list}>
             <h2>最新文章</h2>
-            <div ref='contents' className={styles.contents}></div>
+            <div ref='contents' className={styles.contents}>
+              <Article />
+            </div>
             <div ref='pager'>
               <a className={styles.prev} href='#'>{'< 前页'}</a>
               <a className={styles.next} href='#'>后页 ></a>

@@ -27,33 +27,6 @@
   .list {
     float: left;
     width: 634px;
-
-    .content {
-      margin-bottom: 30px;
-    }
-
-    .content > .top {
-      width: 632px;
-      height: 45px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      border: 1px solid rgb(221, 222, 224);
-    }
-
-    .content > .top > h3 {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-
-    .content > .top > h3:hover {
-      color: rgb(237, 68, 65);
-      cursor: pointer;
-    }
-
-    .content > .top > .author {
-      padding-right: 10px;
-    }
   }
 
   aside {
@@ -128,88 +101,5 @@
       margin-bottom: 10px;
       margin-right: 5px;
     }
-  }
-
-  .content > .top > .head {
-    float: left;
-    height: 100%;
-    max-height: 45px;
-    margin-right: 20px;
-    margin-left: 10px;
-    border-radius: 25px;
-  }
-
-  /*
-  .content > .top > .head {
-
-
-  }
-  */
-  /*
-  .content > .top > .title {
-      color: #777;
-      padding-top: 2px;
-      padding-bottom: 10px;
-  }
-
-  .content > .top > span {
-      padding-right: 10px;
-  }*/
-
-  .content > article {
-    text-align: justify;
-    font-size: 1.076923077rem; /* 14 / 13 */
-    line-height: 1.8;
-  }
-
-  .content > article .content-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .content > article > p > img {
-    width: 100%;
-  }
-
-  .content > article p {
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-
-  .content .read-more {
-    float: right;
-  }
-
-
-  /*************************/
-
-  .content dl {
-    height: 160px;
-  }
-
-  .content dl > dt {
-    float: left;
-    width: 250px;
-    height: 100%;
-    padding-right: 14px;
-  }
-
-
-  .content dl > dt > img {
-    max-width: 100%;
-  }
-
-  .content dl > dd {
-    float: left;
-    width: 370px;
-    height: 100%;
-  }
-
-  .content dl > dd > p {
-    font-size: 14px;
-    line-height: 1.6;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }

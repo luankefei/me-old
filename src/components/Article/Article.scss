@@ -1,0 +1,90 @@
+@import '../../theme/vars.scss';
+
+.article {
+  margin-bottom: 30px;
+
+  > .top {
+    width: 632px;
+    height: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgb(221, 222, 224);
+
+    .head {
+      float: left;
+      height: 100%;
+      max-height: 45px;
+      margin-right: 20px;
+      margin-left: 10px;
+      border-radius: 25px;
+    }
+
+    > h3 {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      &:hover {
+        color: rgb(237, 68, 65);
+        cursor: pointer;
+      }
+    }
+
+    > .author {
+      padding-right: 10px;
+    }
+  }
+
+  > article {
+    text-align: justify;
+    font-size: 1.076923077rem; /* 14 / 13 */
+    line-height: 1.8;
+
+    .content-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    > p {
+    margin-bottom: 20px;
+    text-align: justify;
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  .read-more {
+    float: right;
+  }
+
+  // 下面的代码可能没用
+  // dl {
+  //   height: 160px;
+  // }
+  //
+  // dl > dt {
+  //   float: left;
+  //   width: 250px;
+  //   height: 100%;
+  //   padding-right: 14px;
+  // }
+  //
+  // dl > dt > img {
+  //   max-width: 100%;
+  // }
+  //
+  // dl > dd {
+  //   float: left;
+  //   width: 370px;
+  //   height: 100%;
+  // }
+  //
+  // dl > dd > p {
+  //   font-size: 14px;
+  //   line-height: 1.6;
+  //   padding-top: 10px;
+  //   padding-bottom: 10px;
+  // }
+}
