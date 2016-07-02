@@ -119,27 +119,11 @@ h1 {
 
 select {
   background: #fff;
-  // float: left;
   height: 30px;
-  // line-height: 22px;
   width: 70px;
   border: 1px solid $border-color;
   box-sizing: border-box;
 }
-
-// input[type='checkbox'] {
-//   width: 16px;
-//   height: 16px;
-//   background: #fff;
-//   border: 2px solid #fff;
-//   outline: 1px solid #c9c9c6;
-// }
-// input[type='checkbox']:hover {
-//   background: #c9c9c6;
-// }
-// input[type='checkbox'][data-value="checked"] {
-//   background: #ff6f76;
-// }
 
 button[data-class='button'] {
   width: 80px;
