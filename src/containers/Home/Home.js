@@ -27,7 +27,6 @@ export default class List extends Component {
           <div className={styles.list}>
             <h2>最新文章</h2>
             <div ref='contents' className={styles.contents}></div>
-
             <div ref='pager'>
               <a className={styles.prev} href='#'>{'< 前页'}</a>
               <a className={styles.next} href='#'>后页 ></a>
@@ -39,7 +38,7 @@ export default class List extends Component {
               <input type='text' ref='searchInput' placeholder='标题、作者' />
               <button ref='searchSubmit' title='搜索'></button>
             </div>
-            <h3>留言</h3>
+            <h2>留言</h2>
             <div className={styles.comment}>
               <ul>
                 <li>这个东东不赖</li>
