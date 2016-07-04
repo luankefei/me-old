@@ -3,7 +3,7 @@
 .home {
   .top {
     height: 120px;
-    border-bottom: 1px solid rgb(221, 222, 224);
+    border-bottom: 1px solid $border-color;
     margin-bottom: 62px;
     padding-top: 20px;
 
@@ -36,7 +36,7 @@
 
     .search {
       height: 28px;
-      border: 1px solid rgb(221, 222, 224);
+      border: 1px solid $border-color;
       margin-bottom: 65px;
     }
 
@@ -71,7 +71,7 @@
         li {
           padding-top: 10px;
           padding-bottom: 10px;
-          border-bottom: 1px dotted rgb(221, 222, 224);
+          border-bottom: 1px dotted $border-color;
         }
 
         > :first-child {
@@ -105,7 +105,7 @@
   .pager {
     width: 498px;
     height: 28px;
-    border: 1px solid rgb(221, 222, 224);
+    border: 1px solid $border-color;
 
     text-align: center;
     margin: 0 auto;
