@@ -34,6 +34,10 @@ export default class Detail extends Component {
         </section>
         <div className={styles.comment}>
           <h2>评论</h2>
+          <input type='text' placeholder='昵称' />
+          <textarea name='' id='comment' cols='30' rows='10' placeholder='有事没事，都留个言呗' resize='no'></textarea>
+          <button className={styles.button} data-style='green'>提交</button>
+          {/*
           <dl className={styles.clearfix}>
             <dt>昵称</dt>
             <dd><input type='text' placeholder='昵称' /></dd>
@@ -50,6 +54,7 @@ export default class Detail extends Component {
               <button className={styles.button} data-style='green'>提交</button>
             </dd>
           </dl>
+          */}
         </div>
       </div>
     );
