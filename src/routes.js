@@ -5,9 +5,10 @@ import {
     App,
     Main,
     Home,
-    Login,
     List,
     Detail,
+    Login,
+    Post,
     NotFound
   } from 'containers';
 
@@ -54,7 +55,8 @@ export default (store) => {
       </Route>
 
       {/* Routes */}
-      <Route path='login' component={Login} />
+      <Route path='/admin/login' component={Login} />
+      <Route path='/admin/post' component={Post} />
 
       {/* Catch all route */}
       <Route path='*' component={NotFound} status={404} />

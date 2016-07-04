@@ -4,4 +4,5 @@ export Home from './Home/Home';
 export List from './List/List';
 export Detail from './Detail/Detail';
 export Login from './Login/Login';
+export Post from './Post/Post';
 export NotFound from './NotFound/NotFound';

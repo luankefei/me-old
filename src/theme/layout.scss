@@ -150,7 +150,8 @@ button[data-style='gray'] {
   vertical-align: top;
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='password'] {
   width: 150px;
   height: 30px;
   border: 1px solid $border-color;

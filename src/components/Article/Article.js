@@ -9,7 +9,7 @@ export default function Article() {
     <section className={styles.article}>
       <div className={styles.top}>
         <img src={headImage} alt='' className={styles.head} />
-        <a className={styles.title} href='#'>远去的大学青春，碎碎念，其他</a>
+        <Link className={styles.title} to='/detail/1'>远去的大学青春，碎碎念，其他</Link>
         <span className={styles.author}>sunken</span>
         <span className={styles.date}>2013.11.23</span>
       </div>
