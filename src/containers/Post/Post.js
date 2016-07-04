@@ -15,6 +15,7 @@ export default class Post extends Component {
     super(props);
 
     this.editorLoaded = false;
+    this._postArticle = this.postArticle.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +34,11 @@ export default class Post extends Component {
     };
     document.body.appendChild(script);
     console.log(script);
+  }
+
+  postArticle() {
+    // console.log(window.CKEDITOR.instances.editor1.getData());
+    console.log(window.CKEDITOR.instances.ckeditor.getData());
   }
 
   render() {
@@ -92,7 +98,7 @@ export default class Post extends Component {
           <dl className={styles.clearfix}>
             <dt>&nbsp;</dt>
             <dd>
-              <button ref='submit' className={styles.button}>发送</button>
+              <button ref='submit' className={styles.button} onClick={this._postArticle}>发送</button>
             </dd>
           </dl>
         </div>
