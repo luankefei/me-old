@@ -11,6 +11,7 @@ export default function Nav() {
     <nav className={styles.nav}>
       <div>
         <Link to='/' activeStyle={ACTIVE}>首页</Link>
+        <Link to='comment' activeStyle={ACTIVE}>留言</Link>
         <Link to='about' activeStyle={ACTIVE}>关于</Link>
       </div>
     </nav>
