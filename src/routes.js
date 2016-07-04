@@ -7,6 +7,7 @@ import {
     Home,
     Login,
     List,
+    Detail,
     NotFound
   } from 'containers';
 
@@ -48,7 +49,8 @@ export default (store) => {
       */}
       <Route component={Main}>
         <IndexRoute component={Home} />
-        <Route path='list' component={List} />
+        <Route path='/list/:index' component={List} />
+        <Route path='/:id' component={Detail} />
       </Route>
 
       {/* Routes */}
