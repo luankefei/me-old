@@ -1,3 +1,9 @@
+
+DROP TABLE m_user;
+DROP TABLE m_article;
+DROP TABLE m_comment;
+DROP TABLE m_resource;
+
 CREATE TABLE m_user (
   id tinyint NOT NULL AUTO_INCREMENT,
   username varchar(32),
