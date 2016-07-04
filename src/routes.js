@@ -50,7 +50,7 @@ export default (store) => {
       <Route component={Main}>
         <IndexRoute component={Home} />
         <Route path='/list/:index' component={List} />
-        <Route path='/:id' component={Detail} />
+        <Route path='/detail/:id' component={Detail} />
       </Route>
 
       {/* Routes */}

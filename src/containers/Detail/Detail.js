@@ -30,31 +30,12 @@ export default class Detail extends Component {
               难以忍受的慢的把那份回忆下载回来。经常会很懒，尤其是以前那个有无数G视频的硬盘报废以后，就总是以“只要曾经拥有”和“相见不如怀念”来掩藏自己的懒惰……
             </p>
           </article>
-          {/* <Article /> */}
         </section>
         <div className={styles.comment}>
           <h2>评论</h2>
           <input type='text' placeholder='昵称' />
           <textarea name='' id='comment' cols='30' rows='10' placeholder='有事没事，都留个言呗' resize='no'></textarea>
           <button className={styles.button} data-style='green'>提交</button>
-          {/*
-          <dl className={styles.clearfix}>
-            <dt>昵称</dt>
-            <dd><input type='text' placeholder='昵称' /></dd>
-          </dl>
-          <dl className={styles.clearfix}>
-            <dt>内容</dt>
-            <dd>
-              <textarea name='' id='comment' cols='30' rows='10' placeholder='有事没事，都留个言呗' resize='no'></textarea>
-            </dd>
-          </dl>
-          <dl className={styles.clearfix}>
-            <dt>&nbsp;</dt>
-            <dd>
-              <button className={styles.button} data-style='green'>提交</button>
-            </dd>
-          </dl>
-          */}
         </div>
       </div>
     );
