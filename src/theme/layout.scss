@@ -126,6 +126,15 @@ select {
   box-sizing: border-box;
 }
 
+button {
+  width: 100px;
+  height: 30px;
+  background: $theme-color;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
 button[data-class='button'] {
   width: 80px;
   height: 28px;
@@ -160,4 +169,15 @@ input[type='password'] {
   vertical-align: top;
   border-radius: 3px;
   color: $font-color;
+}
+
+textarea {
+  width: 400px;
+  height: 80px;
+  padding: 4px;
+  border: 1px solid $border-color;
+  display: block;
+  resize: none;
+  box-sizing: border-box;
+  border-radius: 3px;
 }

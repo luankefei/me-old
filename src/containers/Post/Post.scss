@@ -1,46 +1,58 @@
 @import '../../theme/vars.scss';
 
-$loginWidth: 300;
-.login {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: $theme-color-light;
 
-  .main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.post {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
 
-    width: 80%;
-    max-width: ($loginWidth)px;
-    height: 200px;
-    background: transparent;
-    margin: auto;
-    text-align: center;
-  }
+.editor {
+  float: left;
+  width: 640px;
+  height: 600px;
+}
 
-  // 登录区域
-  .slogan {
-    text-align: center;
-    color: #fff;
-    font-size: 28px;
-    padding-bottom: 50px;
-  }
+.form {
+  float: right;
+  width: 500px;
+  height: 500px;
 
-  input {
-    width: ($loginWidth * 0.8 - 10px);
-    // margin-left: ($loginWidth * 0.2)px;
-    height: 34px;
-    border: 1px solid #f5f5f5;
+  > dl {
     margin-bottom: 30px;
-    font-size: 16px;
-    padding-left: 10px;
-    display: block;
-    margin: 0 auto 20px;
+    overflow: hidden;
+    clear: both;
+
+    > dt {
+      float: left;
+      width: 80px;
+      line-height: 30px;
+    }
+
+    dd {
+      float: right;
+      width: 420px;
+    }
   }
+}
+
+// .timer {
+//   display: inline-block;
+//   width: 80px;
+//   margin-left: 25px;
+// }
+
+// .tweet-content {
+//   border: 1px solid $border-color;
+//   width: 410px;
+//   height: 120px;
+//   padding: 4px;
+//   display: block;
+//   resize: none;
+//   border-radius: 3px;
+//   color: #53585F;
+// }
+
+.title {
+  width: 414px;
 }

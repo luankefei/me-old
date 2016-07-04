@@ -110,25 +110,8 @@
       display: block;
     }
 
-    textarea {
-      width: 400px;
-      height: 80px;
-      padding: 4px;
-      border: 1px solid $border-color;
-      display: block;
-      resize: none;
-      box-sizing: border-box;
-      border-radius: 3px;
-    }
-
     button {
-      width: 100px;
-      height: 30px;
       margin-top: 20px;
-      background: rgb(237, 68, 65);
-      color: #fff;
-      border: none;
-      border-radius: 3px;
     }
   }
 }
