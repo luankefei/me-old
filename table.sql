@@ -1,5 +1,5 @@
-create table m_user (
-  id tinyint,
+CREATE TABLE m_user (
+  id tinyint NOT NULL AUTO_INCREMENT,
   username varchar(32),
   password varchar(32),
   nick varchar(40),
@@ -8,35 +8,42 @@ create table m_user (
   state tinyint,
   last_login_time datetime,
   register_time datetime,
-  remark varchar(40)
+  remark varchar(40),
+  PRIMARY KEY (id)
 )
 
-create table m_article (
-  id smallint,
+CREATE TABLE m_article (
+  id smallint NOT NULL AUTO_INCREMENT,
   user_id tinyint,
   content text,
   last_modify_time datetime,
   publish_time datetime,
   type varchar(20),
-  tag varchar(40)
+  tag varchar(40),
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES m_user(id)
 )
 
-create table m_comment (
-  id int,
+CREATE TABLE m_comment (
+  id int NOT NULL AUTO_INCREMENT,
   user_id tinyint,
   article_id smallint,
   last_modify_time datetime,
   publish_time datetime,
-  content text
+  content text,
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES m_user(id),
+  FOREIGN KEY (article_id) REFERENCES m_article(id)
 )
 
-create table m_resource (
-  id smallint,
+CREATE TABLE m_resource (
+  id smallint NOT NULL AUTO_INCREMENT,
   user_id tinyint,
   article_id smallint,
   upload_time datetime,
   url varchar(256),
-  type varchar(20)
+  type varchar(20),
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES m_user(id),
+  FOREIGN KEY (article_id) REFERENCES m_article(id)
 )
-
-
