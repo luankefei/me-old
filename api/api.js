@@ -12,6 +12,7 @@ import path from 'path';
 import config from '../src/config';
 import {mapUrl} from 'utils/url.js';
 import PrettyError from 'pretty-error';
+import mysql from 'libs/mysql.js';
 import _logger from 'libs/logger.js';
 import _debug from 'debug';
 import routes from 'controllers/routes';
@@ -27,6 +28,8 @@ const logger = _logger({
   debug: config.debug,
   path: path.join(config.root, `/logs/me.${config.port}.log`)
 });
+
+mysql.connect();
 
 // responseTime
 app.use(async (ctx, next) => {
