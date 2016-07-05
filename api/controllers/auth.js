@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 export function loadAuth(ctx) {
   ctx.body = {
     nick: 'sunken',
@@ -11,23 +13,12 @@ export function loadAuth(ctx) {
   // return Promise.resolve(req.session.user || null);
 }
 
-export function login(ctx) {
-  // console.log(ctx);
-  console.log('-------', ctx);
-  // const user = {
-  //   username: ctx.body.username,
-  //   password: ctx.body.password
-  // };
-
-  const user = {
-    name: 'hehe',
-    password: '123'
-  };
-
-  // 查库，用username获取用户然后比对password
-
+export async function login(ctx) {
+  // TODO: 查库，用username获取用户然后比对password
+  const user = ctx.request.body;
   ctx.session.user = user;
   ctx.body = user;
+  ctx.status = 200;
 }
 
 export function logout(ctx) {

@@ -4,6 +4,7 @@ import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
 import devLogger from 'koa-logger';
 import Router from 'koa-router';
+import json from 'koa-json';
 
 import util from 'util';
 import path from 'path';
@@ -78,8 +79,9 @@ app.use(convert(session(app)));
 
 // router
 routes(router);
-app.use(router.routes());
 app.use(bodyParser());
+app.use(convert(json()));
+app.use(router.routes());
 // end middlewares
 
 
