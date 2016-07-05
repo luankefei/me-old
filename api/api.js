@@ -5,6 +5,7 @@ import bodyParser from 'koa-bodyparser';
 import devLogger from 'koa-logger';
 import Router from 'koa-router';
 import json from 'koa-json';
+import compress from 'koa-compress';
 
 import util from 'util';
 import path from 'path';
@@ -73,15 +74,24 @@ if (config.env === 'development') {
   app.use(devLogger());
 }
 
+// 设置gzip
+app.use(compress({
+  threshold: 2048,
+  flush: require('zlib').Z_SYNC_FLUSH
+}))
+
 // session
 app.keys = ['me.sunken'];
 app.use(convert(session(app)));
 
+// 传输json
+app.use(convert(json()));
+
 // router
 routes(router);
 app.use(bodyParser());
-app.use(convert(json()));
 app.use(router.routes());
+
 // end middlewares
 
 
