@@ -1,10 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as authActions from 'redux/modules/auth';
-// import api from 'constants/api';
-
-// import global from 'utils/global';
-// import log from 'utils/log';
 
 @connect(
   state => ({user: state.auth.user}),
@@ -15,47 +11,35 @@ export default class Login extends Component {
     login: PropTypes.func
   }
 
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   event.stopPropagation();
+  constructor(props) {
+    super(props);
 
-  //   console.log('status:', api.status);
+    // 登录
+    this._login = () => this.login.call(this);
+  }
 
-  //   const username = this.refs.username.value;
-  //   const password = this.refs.password.value;
+  login() {
+    console.log('dologin');
+    const username = this.refs.username.value;
+    const password = this.refs.password.value;
 
-  //   if (!username || !password) {
-  //     return false;
-  //   }
-
-  //   this.props.login(username, password)
-  //     .then(res => {
-  //       if (!res.error) {
-  //         log.send({
-  //           log_key: 'genius_login',
-  //           genius_id: res.data.genius.genius_id
-  //         });
-  //         global.fortune = res.data.fortune_cookie;
-
-  //       } else {
-  //         global.App.showNotifications({
-  //           title: '登录失败',
-  //           message: res.error.detail,
-  //           level: 'error'
-  //         });
-  //       }
-  //     });
-  // }
+    if (username && password) {
+      this.props.login(username, password)
+        .then(res => console.log('do Login response', res));
+    }
+  }
 
   render() {
     const styles = require('./Login.scss');
-    // const logoSrc = require('../components/Nav/logo.png');
     return (
       <div className={styles.login}>
         <div className={styles.main}>
           <div className={styles.slogan}>Hello, my old friend.</div>
-          <input ref='username' type='text' placeholder='用户名' value='sunken' />
-          <input ref='password' type='password' placeholder='密码' value='123456' />
+          <form onSubmit={this._login}>
+            <input ref='username' type='text' placeholder='用户名' defaultValue='sunken' />
+            <input ref='password' type='password' placeholder='密码' defaultValue='123456' />
+            <button type='submit' style={{ opacity: 0 }}>登录</button>
+          </form>
         </div>
       </div>
     );

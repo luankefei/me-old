@@ -1,4 +1,4 @@
-
+show tables;
 DROP TABLE m_user;
 DROP TABLE m_article;
 DROP TABLE m_comment;
@@ -16,7 +16,7 @@ CREATE TABLE m_user (
   register_time datetime,
   remark varchar(40),
   PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE m_article (
   id smallint NOT NULL AUTO_INCREMENT,
@@ -28,7 +28,7 @@ CREATE TABLE m_article (
   tag varchar(40),
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES m_user(id)
-)
+);
 
 CREATE TABLE m_comment (
   id int NOT NULL AUTO_INCREMENT,
@@ -40,7 +40,7 @@ CREATE TABLE m_comment (
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES m_user(id),
   FOREIGN KEY (article_id) REFERENCES m_article(id)
-)
+);
 
 CREATE TABLE m_resource (
   id smallint NOT NULL AUTO_INCREMENT,
@@ -52,4 +52,4 @@ CREATE TABLE m_resource (
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES m_user(id),
   FOREIGN KEY (article_id) REFERENCES m_article(id)
-)
+);

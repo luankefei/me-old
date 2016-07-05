@@ -12,11 +12,22 @@ export function loadAuth(ctx) {
 }
 
 export function login(ctx) {
+  // console.log(ctx);
+  console.log('-------', ctx);
+  // const user = {
+  //   username: ctx.body.username,
+  //   password: ctx.body.password
+  // };
+
   const user = {
-    name: ctx.body.name
+    name: 'hehe',
+    password: '123'
   };
+
+  // 查库，用username获取用户然后比对password
+
   ctx.session.user = user;
-  return user;
+  ctx.body = user;
 }
 
 export function logout(ctx) {
