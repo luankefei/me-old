@@ -39,8 +39,26 @@ export function getConnect() {
   return _instance;
 }
 
+function query(sql) {
+  return new Promise(function (resolve, reject) {
+    if (!_instance) {
+      reject(new Error('db instance is not exists'));
+    }
+
+    _instance.query(sql, function(err, rows, fields) {
+      if (err) {
+        mysql.getConnect().rollback(function () {
+          reject(err);
+        });
+      }
+
+      return resolve(rows);
+    });
+  });
+}
+
 export default {
   connect,
   getConnect,
-  // query,
+  query,
 };
