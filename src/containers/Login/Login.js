@@ -1,14 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import {push} from 'react-router-redux';
 import * as authActions from 'redux/modules/auth';
 
 @connect(
   state => ({user: state.auth.user}),
-  authActions)
+  Object.assign(authActions, { pushState: push }))
 export default class Login extends Component {
   static propTypes = {
-    user: PropTypes.object,
-    login: PropTypes.func
+    pushState: PropTypes.func.isRequired,
+    login: PropTypes.func.isRequired,
+    user: PropTypes.object
   }
 
   constructor(props) {
@@ -19,13 +21,18 @@ export default class Login extends Component {
   }
 
   login() {
-    console.log('login occued');
     const username = this.refs.username.value;
     const password = this.refs.password.value;
 
     if (username && password) {
-      this.props.login(username, password);
-        // .then(res => console.log('do Login response', res));
+      this.props.login(username, password)
+        .then(res => {
+          if (res) {
+            alert('登录失败');
+          } else {
+            this.props.pushState('/admin/post');
+          }
+        });
     }
   }
 
