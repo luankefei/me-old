@@ -10,7 +10,6 @@ export function loadAuth(ctx) {
 
 // 查库，用username获取用户然后比对password
 export async function login(ctx) {
-  console.log('😄 login', ctx.request.body);
   const username = ctx.request.body.username;
   const password = ctx.request.body.password;
 
