@@ -91,7 +91,7 @@ export default class Post extends Component {
             <dt></dt>
             <dd>
             <div ref='upload'>
-              <input className={styles.textbox} type='text' value='图片上传的占位' />
+              <input className={styles.textbox} type='text' placeholder='图片上传的占位' />
             </div>
             </dd>
           </dl>
