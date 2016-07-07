@@ -1,14 +1,15 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import * as authActions from 'redux/modules/auth';
+import * as postActions from 'redux/modules/post';
 
 @connect(
   state => ({user: state.auth.user}),
-  authActions)
+  postActions)
 export default class Post extends Component {
   static propTypes = {
-    user: PropTypes.object,
-    login: PropTypes.func
+    uploadImage: PropTypes.func.isRequired,
+    user: PropTypes.object
+    // login: PropTypes.func,
   }
 
   constructor(props) {
@@ -16,6 +17,7 @@ export default class Post extends Component {
 
     this.editorLoaded = false;
     this._postArticle = this.postArticle.bind(this);
+    this._upload = this.upload.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +36,17 @@ export default class Post extends Component {
     };
     document.body.appendChild(script);
     console.log(script);
+  }
+
+  upload(event) {
+    const file = event.target.files[0];
+
+    if (file && file.size < 1024 * 1024) {
+      console.log('图片上传');
+      this.props.uploadImage(file);
+    } else {
+      alert('文件太大了，请使用小于1M的图片');
+    }
   }
 
   postArticle() {
@@ -91,7 +104,7 @@ export default class Post extends Component {
             <dt></dt>
             <dd>
             <div ref='upload'>
-              <input className={styles.textbox} type='text' placeholder='图片上传的占位' />
+              <input className={styles.textbox} type='file' placeholder='图片上传的占位' onChange={this._upload} />
             </div>
             </dd>
           </dl>

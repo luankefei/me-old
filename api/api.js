@@ -6,6 +6,7 @@ import devLogger from 'koa-logger';
 import Router from 'koa-router';
 import json from 'koa-json';
 import compress from 'koa-compress';
+import multer from 'koa-multer';
 
 import util from 'util';
 import path from 'path';
@@ -89,6 +90,10 @@ app.use(convert(session(app)));
 
 // 传输json
 app.use(convert(json()));
+
+console.log('😄 multer herere: ', multer, typeof multer);
+// 上传
+app.use(multer({ dest: './uploads/' }));
 
 // router
 routes(router);
